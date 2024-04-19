@@ -29,8 +29,8 @@ Here's a quick example of how to run a mock interview session:
 
 python
 -------------------------------------------------------------------
-from chatbot import Chatbot
-chatbot = Chatbot(position="Software Engineer")
+from chatbot import Chatbot \n
+chatbot = Chatbot(position="Software Engineer") \n
 chatbot.start_conversation("John Doe")
 
 -------------------------------------------------------------------
