@@ -19,7 +19,7 @@ A step-by-step guide on how to get a development environment running:
 
 Clone the repo:
 
-git clone https://github.com/your_username/AI_Mock_Interview_Platform
+git clone https://github.com/dhaerieshan/AI_Mock_Interview
 Navigate to the project directory and install required packages:
 
 
