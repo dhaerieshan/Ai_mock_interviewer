@@ -8,7 +8,7 @@ Features
 Realistic Interview Simulation: Mimics actual interview scenarios to provide a real-life experience.
 Voice Input and Response: Supports voice-based interactions, capturing and processing spoken responses.
 Dynamic Questioning: The system dynamically adjusts the complexity and nature of questions based on the user's performance.
-Feedback System: Offers detailed feedback on each session, including areas of strength and improvement suggestions.
+Feedback System: Offers detailed feedback on each session, including areas of strength and improvement suggestions *Feedback is generated in a doc file*.
 Prerequisites
 Before you begin, ensure you have met the following requirements:
 
