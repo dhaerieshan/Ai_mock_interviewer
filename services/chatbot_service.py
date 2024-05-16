@@ -1,6 +1,3 @@
-from speech_service import SpeechService
-from evaluation_service import EvaluationService
-import os
 from openai import AzureOpenAI
 
 class Chatbot:
