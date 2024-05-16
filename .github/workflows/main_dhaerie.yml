@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'Dhaerie'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_78FDFBC50283428B96CF097D25B7CB78 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_91F4C00BFC2A4F4691CDB9689F4B19C3 }}
