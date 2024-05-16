@@ -1,4 +1,0 @@
-openai
-python-docx
-python-dotenv
-azure-cognitiveservices-speech
