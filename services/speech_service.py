@@ -12,31 +12,23 @@ class SpeechService:
 
     def initialize_speech_components(self):
         self.speech_config = speechsdk.SpeechConfig(subscription=self.speech_key, region=self.service_region)
-        self.audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
-        self.speech_recognizer = speechsdk.SpeechRecognizer(speech_config=self.speech_config, audio_config=self.audio_config)
-        self.speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=self.speech_config)
 
-    def listen_once(self):
-        print("Listening...")
-        result = self.speech_recognizer.recognize_once()
-        if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-            print(f"Recognized: {result.text}")
-            return result.text
-        elif result.reason == speechsdk.ResultReason.NoMatch:
-            print("No speech could be recognized.")
-        elif result.reason == speechsdk.ResultReason.Canceled:
-            cancellation_details = result.cancellation_details
-            print(f"Speech recognition canceled: {cancellation_details.reason}")
-        return None  # Ensure that None is returned if no valid input is recognized
+    def listen_once(self, audio_file_path):
+        audio_config = speechsdk.audio.AudioConfig(filename=audio_file_path)
+        speech_recognizer = speechsdk.SpeechRecognizer(speech_config=self.speech_config, audio_config=audio_config)
+        result = speech_recognizer.recognize_once()
+        return self.handle_result(result)
 
     def handle_result(self, result):
         if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-            print(f"Recognized: {result.text}")
+            return result.text
         elif result.reason == speechsdk.ResultReason.NoMatch:
-            print("No speech could be recognized.")
+            return "No speech could be recognized."
         elif result.reason == speechsdk.ResultReason.Canceled:
             cancellation_details = result.cancellation_details
-            print(f"Speech recognition canceled: {cancellation_details.reason}")
+            return f"Speech recognition canceled: {cancellation_details.reason}"
+        return None
 
     def speak(self, text):
-        self.speech_synthesizer.speak_text(text)
+        speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=self.speech_config)
+        speech_synthesizer.speak_text(text)
