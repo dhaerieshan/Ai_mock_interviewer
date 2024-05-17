@@ -4,3 +4,4 @@ python-dotenv
 azure-cognitiveservices-speech
 streamlit
 docx
+fastapi
