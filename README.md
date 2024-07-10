@@ -1,39 +1,36 @@
-AI Mock Interview 
-This project is an AI-driven mock interview platform designed to help freshers practice and prepare for interviews. The platform simulates real interview scenarios, evaluates responses, and provides feedback to improve the candidate's performance.
+1. Gen AI-based AI Interviewer
+This project is an AI-driven interview platform utilizing generative AI techniques to conduct and assess interviews.
 
 Description
-The AI Mock Interview Platform utilizes advanced AI and speech processing technologies to create a realistic interview environment. It supports voice interactions where candidates can respond to questions verbally, and these responses are analyzed by the system to provide constructive feedback.
+The Gen AI-based AI Interviewer uses generative AI and natural language processing (NLP) to simulate real interview scenarios. It asks questions, evaluates responses, and provides feedback to improve the candidate's performance.
 
 Features
-Realistic Interview Simulation: Mimics actual interview scenarios to provide a real-life experience.<br />
-Voice Input and Response: Supports voice-based interactions, capturing and processing spoken responses.<br />
-Dynamic Questioning: The system dynamically adjusts the complexity and nature of questions based on the user's performance.<br />
-Feedback System: Offers detailed feedback on each session, including areas of strength and improvement suggestions *Feedback is generated in a doc file*.<br />
+Automated Interview Process: Conducts interviews by asking questions and assessing responses.
+Generative AI for Questions: Creates and customizes interview questions.
+Feedback and Scoring: Provides feedback and scores based on the interviewee’s responses.
 Prerequisites
-Before you begin, ensure you have met the following requirements:
-
-You have Python 3.8+ installed on your machine.<br />
-You have access to the internet to install additional Python packages.<br />
-
+Python 3.8+
+Internet access to install additional Python packages.
 Installation
-A step-by-step guide on how to get a development environment running:<br />
-
 Clone the repo:
 
-git clone https://github.com/dhaerieshan/AI_Mock_Interview.<br />
-Navigate to the project directory and install required packages:<br />
+bash
+Copy code
+git clone https://github.com/dhaerieshan/Gen_AI_Interviewer
+Navigate to the project directory and install required packages:
 
-
+bash
+Copy code
+cd Gen_AI_Interviewer
 pip install -r requirements.txt
 Usage
-Here's a quick example of how to run a mock interview session:
+Install the required packages:
 
-python
--------------------------------------------------------------------
-from chatbot import Chatbot 
+bash
+Copy code
+pip install -r requirements.txt
+Run the application using Streamlit:
 
-chatbot = Chatbot(position="Software Engineer") 
-
-chatbot.start_conversation("John Doe")
-
--------------------------------------------------------------------
+bash
+Copy code
+streamlit run app.py
